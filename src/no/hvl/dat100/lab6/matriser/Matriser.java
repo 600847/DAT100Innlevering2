@@ -7,6 +7,7 @@ public class Matriser {
 		
 		// TODO
 		throw new UnsupportedOperationException("skrivUt ikke implementert");
+		//test
 	}
 
 	// b)
