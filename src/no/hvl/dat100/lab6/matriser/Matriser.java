@@ -76,16 +76,39 @@ public class Matriser {
 	// e)
 	public static int[][] speile(int[][] matrise) {
 
-		// TODO
-		throw new UnsupportedOperationException("speile ikke implementert");
-	
+		int[][] speilTabell = new int[matrise.length][];
+		for(int i = 0; i < matrise.length; i++) {
+			speilTabell[i] = new int[matrise[i].length];
+		}
+			
+			for( int j = 0; j<speilTabell.length; j++) {
+				for (int k= 0; k<speilTabell[j].length; k++) {
+					speilTabell[k][j] = matrise[j][k];
+				}
+			}
+			
+		return speilTabell;
 	}
 
 	// f)
 	public static int[][] multipliser(int[][] a, int[][] b) {
+		
+		int[][] multiTabell = new int[a.length][];
+		for(int i = 0; i < a.length; i++) {
+			multiTabell[i] = new int[a[i].length];
+			
+		}
+		
+		for (int i= 0; i<multiTabell.length; i++) {
+			for(int j = 0; j<multiTabell[i].length; j++) {
+					multiTabell[i][j] = (a[i][0]*b[0][j])
+										+(a[i][1]*b[1][j])+
+										(a[i][2]*b[2][j]);
+					System.out.println(multiTabell[i][j]);
+			}
+		}
+					
 
-		// TODO
-		throw new UnsupportedOperationException("multipliser ikke implementert");
-	
+			return multiTabell;
 	}
 }
